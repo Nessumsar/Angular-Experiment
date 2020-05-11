@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"angularexperimentd141617d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
