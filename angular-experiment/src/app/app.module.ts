@@ -11,15 +11,40 @@ import { RemoveUserFromGroupComponent } from './remove-user-from-group/remove-us
 import { RemoveUserComponent } from './remove-user/remove-user.component';
 import { AddWorkGroupComponent } from './add-work-group/add-work-group.component';
 import { ListTenantsComponent } from './list-tenants/list-tenants.component';
+import { ListWorkGroupsComponent } from './list-work-groups/list-work-groups.component';
+import { WorkGroupViewComponent } from './work-group-view/work-group-view.component';
+import {RouterModule} from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 @NgModule({
   declarations: [
-    AppComponent, TenantViewComponent, AddUserComponent, RemoveWorkGroupComponent,
-    AddUserToGroupComponent, RemoveUserFromGroupComponent, RemoveUserComponent, AddWorkGroupComponent, ListTenantsComponent
+    AppComponent,
+    AddUserComponent,
+    AddWorkGroupComponent,
+    AddUserToGroupComponent,
+    ListTenantsComponent,
+    ListWorkGroupsComponent,
+    RemoveWorkGroupComponent,
+    RemoveUserFromGroupComponent,
+    RemoveUserComponent,
+    TenantViewComponent,
+    WorkGroupViewComponent,
+    NavbarComponent,
   ],
   imports: [
+    AmplifyUIAngularModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path : '', component: NavbarComponent}, // ändra till någon index
+      {path : 'tenant-view', component: TenantViewComponent},
+      {path : 'add-user', component: AddUserComponent},
+      {path : 'add-work-group', component: AddWorkGroupComponent},
+      {path : 'tenant/:groupname', component: AppComponent},
+      {path : 'work-group/:groupname', component: AppComponent},
+      {path : 'super', component: ListTenantsComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent],
