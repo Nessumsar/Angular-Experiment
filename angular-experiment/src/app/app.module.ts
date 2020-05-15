@@ -37,13 +37,16 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path : '', component: NavbarComponent}, // ändra till någon index
+      {path : '', component: TenantViewComponent}, // ändra till någon index
       {path : 'tenant-view', component: TenantViewComponent},
       {path : 'add-user', component: AddUserComponent},
+      {path : 'remove-user', component: RemoveUserComponent},
       {path : 'add-work-group', component: AddWorkGroupComponent},
+      {path : 'remove-work-group', component: RemoveWorkGroupComponent},
       {path : 'tenant/:groupname', component: AppComponent},
       {path : 'work-group/:groupname', component: AppComponent},
-      {path : 'super', component: ListTenantsComponent}
+      {path : 'super', component: ListTenantsComponent},
+      {path : 'work-group-list', component: ListWorkGroupsComponent}
     ])
   ],
   providers: [],

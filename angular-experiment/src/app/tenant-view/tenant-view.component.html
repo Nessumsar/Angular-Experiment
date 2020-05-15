@@ -1,15 +1,20 @@
 <!-- Ska flyttas -->
 <div>
-  <button type="button" class="btn btn-primary" id="add-user">Lägg till användare</button>
-  <button type="button" class="btn btn-primary" id="remove-user">Ta bort användare</button>
+  <a routerLink="/add-user">
+    <button type="button" class="btn btn-primary" id="add-user">
+      Skapa användare
+    </button>
+  </a>
+  <a routerLink="/remove-user">
+    <button type="button" class="btn btn-primary" id="remove-user">
+      Radera användare
+    </button>
+  </a>
 </div>
 
 <br>
-<!---<td><a href="url">></a></td> ELLER <td>></td> nån dropdown  ---->
-<div class="container">
-  <input class="form-control mb-4" id="tableSearch" type="text"
-         placeholder="Hitta användare">
 
+<div class="container">
   <table class="table table-bordered table-striped">
 
     <tbody id="myTable">
@@ -17,29 +22,29 @@
       <td>Användarnamn</td>
       <td>Email</td>
       <td>Telefonummer</td>
-      <td><a href="url">Nollställ lösenord</a></td>
-      <td><a href="url">></a></td>
+      <td>Grupper</td>
+      <td><a routerLink="">Nollställ lösenord</a></td>
     </tr>
     <tr>
       <td>Användarnamn</td>
       <td>Email</td>
       <td>Telefonummer</td>
-      <td><a href="url">Nollställ lösenord</a></td>
-      <td><a href="url">></a></td>
+      <td>Grupper</td>
+      <td><a routerLink="">Nollställ lösenord</a></td>
     </tr>
     <tr>
       <td>Användarnamn</td>
       <td>Email</td>
       <td>Telefonummer</td>
-      <td><a href="url">Nollställ lösenord</a></td>
-      <td><a href="url">></a></td>
+      <td>Grupper</td>
+      <td><a routerLink="">Nollställ lösenord</a></td>
     </tr>
     <tr>
       <td>Användarnamn</td>
       <td>Email</td>
       <td>Telefonummer</td>
-      <td><a href="url">Nollställ lösenord</a></td>
-      <td><a href="url">></a></td>
+      <td>Grupper</td>
+      <td><a routerLink="">Nollställ lösenord</a></td>
     </tr>
     </tbody>
   </table>
