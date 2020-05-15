@@ -17,6 +17,14 @@ import {RouterModule} from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
+import Amplify from 'aws-amplify';
+import awsconfig from 'src/environments/aws-config.js';
+import { LoginComponent } from './login/login.component';
+
+/* Configure Amplify resources */
+Amplify.configure(awsconfig);
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +39,7 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
     TenantViewComponent,
     WorkGroupViewComponent,
     NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     AmplifyUIAngularModule,
@@ -46,7 +55,8 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
       {path : 'tenant/:groupname', component: AppComponent},
       {path : 'work-group/:groupname', component: AppComponent},
       {path : 'super', component: ListTenantsComponent},
-      {path : 'work-group-list', component: ListWorkGroupsComponent}
+      {path : 'work-group-list', component: ListWorkGroupsComponent},
+      {path : 'login', component: LoginComponent}
     ])
   ],
   providers: [],
